@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracking</title>
+</head>
+<body>
+    <h2>Hey there, let's track your mood!</h2>
+    <p>Please enter your name to start it!!</p>
+    
+    <form action="/start_game" method="post">
+        <label for="name">Your Name: </label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="mood">Your Mood: </label>
+        <input type="radio" name="mood" value="Happy" required> Happy
+        <input type="radio" name="mood" value="Neutral" required> Neutral
+        <input type="radio" name="mood" value="Sad" required> Sad<br><br>
+
+        <button type="submit">Start</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Game Page Styles */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(80px, 120px));
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border: 2px solid #333;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.mole {
+    width: 80px;
+    height: 80px;
+    background-color: black; /* Changed to black */
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.mole.show {
+    transform: scale(1);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.stop-btn {
+    background-color: #f04e30;
+}
+
+.stop-btn:hover {
+    background-color: #d43f2a;
+}
+
+/* Void Page Styles */
+.void-background {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.okay-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.okay-btn:hover {
+    background-color: #0056b3;
+}
+
+#animation-container {
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.paper {
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    transition: transform 2s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.torn {
+    transform: translateY(150px) rotate(20deg);
+    opacity: 0;
+}
+
+.dustbin {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hidden {
+    display: none;
+}

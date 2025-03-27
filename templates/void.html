@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Void - Share Your Worries</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="void-background">
+    <h2>Share your problem with us, so that you can feel relief</h2>
+    <textarea id="problemInput" placeholder="Write your problem here..."></textarea>
+    <br>
+    <button class="okay-btn">Okay</button>
+    
+    <div id="animation-container">
+        <div id="paper" class="paper hidden"></div>
+        <div class="dustbin"></div>
+    </div>
+    
+    <p id="finalMessage" class="hidden">Your worries are gone. You are strong! 💙</p>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
